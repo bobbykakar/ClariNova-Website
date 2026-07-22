@@ -39,20 +39,21 @@ Give it a few minutes, then visit clarinovapartners.com — it should show your 
 Once that's confirmed, anything sent to bobby@clarinovapartners.com lands straight in
 your existing inbox — no new inbox to check.
 
+## Adding these PDFs to your already-deployed site
+Your site's already live, so this is just an update, not a fresh setup:
+1. Open your "ClariNova-Website" repo on GitHub
+2. Click "Add file" → "Upload files"
+3. Drag in the whole `assets` folder from this new zip (it now includes a
+   `resources` subfolder with both PDFs)
+4. Commit changes
+5. Cloudflare Pages will automatically rebuild and redeploy within a minute or
+   two — no need to touch Cloudflare at all
+
+The Resources page is already wired up to link to both files, so once the
+upload lands, the "Download PDF" buttons go live automatically.
+
 ## Making small edits later
 Every page is a plain text file — open it on GitHub (click the file, then the pencil/edit
 icon), change the text between the tags, and click "Commit changes." Cloudflare
 Pages redeploys automatically within a minute or two. No coding tools needed for
 text-only changes.
-
-## When the two PDFs are ready
-Upload the PDF files into the repo (same drag-and-drop upload step as above), then in
-`resources.html` find the two lines that say:
-```html
-<span class="btn btn-ghost" style="opacity:0.5; pointer-events:none;">Download PDF</span>
-```
-and replace each with (using your actual PDF filename):
-```html
-<a class="btn btn-ghost" href="gcc-digital-assets-overview.pdf">Download PDF</a>
-```
-Also remove the "Coming soon" line above each card once it's live.
